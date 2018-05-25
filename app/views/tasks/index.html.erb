@@ -1,0 +1,14 @@
+<h1>To-Do:</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <% if task.completed %>
+        <%= image_tag 'yes.png', height: '26' %>
+      <% else %>
+        <%= image_tag 'no.svg', height: '26' %>
+      <% end %>
+      <%= task.title %>
+      <p><%= task.details %></p>
+    </li>
+  <% end %>
+</ul>

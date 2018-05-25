@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+titles = ['Laundry', 'Grocery', 'Masturbate', 'Study', 'Fuck', 'Drink']
+details = ['By friday', 'Urgent!', 'Dio banana', 'Eddaje', 'Uppa', 'Belin']
+10.times { Task.create title: titles.sample, details: details.sample, completed: [true, false].sample }
