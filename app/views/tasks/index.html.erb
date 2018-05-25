@@ -1,14 +1,24 @@
 <h1>To-Do:</h1>
 <ul>
-  <% @tasks.each do |task| %>
+  <% @tasks.reverse.each do |task| %>
     <li>
-      <% if task.completed %>
-        <%= image_tag 'yes.png', height: '26' %>
-      <% else %>
-        <%= image_tag 'no.svg', height: '26' %>
+      <%= link_to task_complete_path(task) do %>
+        <% if task.completed %>
+          <%= image_tag 'yes.png', height: '26' %>
+        <% else %>
+          <%= image_tag 'no.svg', height: '26' %>
+        <% end %>
       <% end %>
+
       <%= task.title %>
+      <%= link_to "Edit", task_edit_path(task), class: 'edit-link' %>
+      <%= link_to "Delete", task_delete_path(task), method: :delete, class: 'delete-link'  %>
       <p><%= task.details %></p>
+
     </li>
   <% end %>
 </ul>
+
+<%= link_to task_new_path do %>
+  <%= image_tag 'add-list.svg', id: 'add-list', title: 'Add a new task' %>
+<% end %>

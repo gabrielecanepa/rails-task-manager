@@ -1,0 +1,10 @@
+<h1>Create a new task:</h1>
+
+<%= form_for @task, :url => task_new_path do |f| %>
+  <%= f.label :title, "Title" %>
+  <%= f.text_field :title, autocomplete: 'off' %>
+  <%= f.label :details, "Description" %>
+  <%= f.text_field :details, autocomplete: 'off' %>
+  <%= f.submit %>
+  <%= link_to "← Go Back", root_path, class: 'back-link' %>
+<% end %>

@@ -1,12 +1,60 @@
 * {
   font-family: sans-serif;
 }
+*:focus {
+  outline: none;
+}
 body {
   background: #D03538;
 }
 h1 {
   text-align: center;
   color: white;
+}
+a {
+  text-decoration: none;
+}
+form {
+  width: 400px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 4px;
+  padding: 12px 30px 24px 30px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+input, label {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+label {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-top: 40px;
+}
+input[type="text"] {
+  background-color: transparent;
+  border: none;
+  border-radius: 2px;
+  border-bottom: 3px solid #D03538;
+  font-size: 1.4rem;
+  min-width: 300px;
+  margin: auto auto 20px auto;
+  padding: 20px 0 10px 0;
+  font-weight: lighter;
+}
+input[type="submit"] {
+  font-size: 1.4rem;
+  min-width: 300px;
+  margin-top: 40px;
+  border-radius: 4px;
+  color: white;
+  background: #2FC09A;
+  padding: 15px 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
 }
 ul {
   width: 400px;
@@ -15,15 +63,59 @@ ul {
 li {
   background: white;
   list-style-type: none;
-  padding: 20px 30px;
+  padding: 24px 30px;
   margin: 10px;
   box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   border-radius: 4px;
   font-size: 28px;
+  cursor: pointer;
+  img {
+    margin: 0 10px -3px 10px;
+  }
   p {
     font-size: 16px;
-    padding-left: 34px;
-    margin: 4px 0;
+    padding-left: 55px;
+    margin: 6px 0;
     color: #444;
   }
+  &:hover .edit-link, &:hover .delete-link {
+    display: inline;
+  }
 }
+#add-list {
+  width: 38px;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+}
+.back-link {
+  color: #D03538;
+  font-weight: bolder;
+  display: inline-block;
+  margin-top: 30px;
+}
+.edit-link {
+  font-size: 14px;
+  font-weight: bolder;
+  color: #5FA8F9;
+  display: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: #5FA8F9;
+  }
+}
+.delete-link {
+  font-size: 14px;
+  font-weight: bolder;
+  color: #D03538;
+  display: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: #D03538;
+  }
+}
+

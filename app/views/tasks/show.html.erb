@@ -1,0 +1,7 @@
+<% if @task.completed %>
+  <%= image_tag 'yes.png', height: '64', style: 'text-align: center;' %>
+<% else %>
+  <%= image_tag 'no.svg', height: '64', style: 'text-align: center;' %>
+<% end %>
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
